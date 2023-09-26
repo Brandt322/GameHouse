@@ -20,4 +20,8 @@ public class PersistanceController {
     public List<User> getUsers() {
         return userJpaController.findUserEntities();
     }
+    
+    public User getUserById(int id) {
+        return userJpaController.findUser(id);
+    }
 }

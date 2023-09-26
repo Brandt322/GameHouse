@@ -1,0 +1,16 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 25 sept 2023, 21:03:58
+    Author     : U17302383
+*/
+
+.login_view {
+  background-color: #EBEFFF;
+  background-image: url("../assets/Login Pageloginview.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -21,4 +21,8 @@ public class Controller {
     public List<User> getUsers() {
         return persistanceController.getUsers();
     }
+    
+    public User getUserById(int id) {
+        return persistanceController.getUserById(id);
+    }
 }

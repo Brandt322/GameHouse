@@ -48,7 +48,7 @@ public class UserServlet extends HttpServlet {
         
         HttpSession session = request.getSession();
         session.setAttribute("userList", users);
-        response.sendRedirect("home.jsp");
+        response.sendRedirect("test.jsp");
     }
 
     /**
@@ -65,12 +65,25 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        PrintWriter out = response.getWriter();
         
-        User user = new User();
-        user.setEmail(email);
-        user.setUsername(username);
-        user.setPassword(password);
-        controller.createUser(user);
+        
+        if (email.isEmpty() || username.isEmpty() || password.isEmpty()) {
+            // Al menos uno de los campos está vacío
+            String errorMessage = "Todos los campos son obligatorios.";
+            request.setAttribute("errorMessage", errorMessage);
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+        } else {
+            // Todos los campos están llenos, procede con la creación del usuario
+            User user = new User();
+            user.setEmail(email);
+            user.setUsername(username);
+            user.setPassword(password);
+            controller.createUser(user);
+
+            // Redirige a una página de éxito o a donde desees después de crear el usuario
+            response.sendRedirect("home.jsp");
+        }
     }
 
     /**
