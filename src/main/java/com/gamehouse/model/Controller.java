@@ -25,4 +25,12 @@ public class Controller {
     public User getUserById(int id) {
         return persistanceController.getUserById(id);
     }
+    
+    public User getUserByEmailAndPassword(String email, String password) {
+        return persistanceController.getUserByEmailAndPassword(email, password);
+    }
+    
+    public User getUserByEmail(String email) {
+        return persistanceController.getUserByEmail(email);
+    }
 }

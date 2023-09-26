@@ -22,21 +22,24 @@
                 <div class="col-sm-8 d-flex justify-content-center align-items-center">
                     <div class="container d-flex justify-content-center align-items-center">
                         <form class="p-4" method="POST" action="LoginServlet">
+                            <p class="fs-2 lh-1 text-center">Bienvenido de nuevo!</p>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email address</label>
                                 <input type="email" name="email" class="form-control" id="email" aria-describedby="email">
-                                <div id="email" class="form-text">We'll never share your email with anyone else.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" name="password" class="form-control" id="password">
+                                <div id="password" class="form-text">Contraseña cifrada de lado a lado.</div>
                             </div>
-                            <button type="submit" name="btn_login" class="btn btn-primary">Submit</button>
+                            <div class="d-grid col-sm-8 w-100 ">
+                                <button type="submit" name="btn_login" class="btn btn-login">Ingresar</button>
+                            </div>
                             <% if (request.getAttribute("errorMessage") != null) {%>
                             <div class='mb-3 alert alert-danger text-center mt-2'><%= request.getAttribute("errorMessage")%></div>
                             <% }%>
+                            <div class="form-text">Na tienes una cuenta? <a aria-current="page" href="register.jsp">Registrate</a></div>
                         </form>
-
                     </div>
                 </div>
                 <div class="col-sm-4 bg-color">

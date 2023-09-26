@@ -13,6 +13,12 @@
         <title>JSP Page</title>
     </head>
     <body>
+         
+        <--<!-- <h1>Hello World!</h1>
+        <form action="UserServlet" method="GET">
+            <button type="submit">Mostrar user</button>
+        </form> -->
+        
         <h1>Usuario</h1>
         <%
             List<User> users = (List) request.getSession().getAttribute("userList");

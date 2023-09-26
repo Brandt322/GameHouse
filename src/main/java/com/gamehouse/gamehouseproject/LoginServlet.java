@@ -7,7 +7,6 @@ package com.gamehouse.gamehouseproject;
 import com.gamehouse.model.Controller;
 import com.gamehouse.model.User;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -57,8 +56,9 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        User user = controller.getUserByEmailAndPassword(email, password);
         
-        if (email.isEmpty() || password.isEmpty()) {
+        if (email.isEmpty() || password.isEmpty() || user == null) {
             // Al menos uno de los campos está vacío
             String errorMessage = "Todos los campos son obligatorios.";
             request.setAttribute("errorMessage", errorMessage);
@@ -67,8 +67,9 @@ public class LoginServlet extends HttpServlet {
             // Iniciar sesión
             HttpSession session = request.getSession();
             session.setAttribute("logueado", "1");
+            session.setAttribute("id", user.getId());
             session.setAttribute("email", email);
-
+            session.setAttribute("username", user.getUsername());
             // Redirige a "home.jsp"
             response.sendRedirect("home.jsp");
         }

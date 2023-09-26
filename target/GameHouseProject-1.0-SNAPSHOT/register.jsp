@@ -14,29 +14,47 @@
               rel="stylesheet" 
               integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
               crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css"/>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <form action="UserServlet" method="POST">
-            <p>
-                <label>Email: </label> <input type="email" name="email"/>
-            </p>
-            <p>
-                <label>Username: </label> <input type="text" name="username"/>
-            </p>
-            <p>
-                <label>Password: </label> <input type="password" name="password"/>
-            </p>
-            <button type="submit">Submit</button>
-        </form>
-        
-        <% if (request.getAttribute("errorMessage") != null) {%>
-        <div class='alert alert-danger text-center mt-2'><%= request.getAttribute("errorMessage")%></div>
-        <% }%>
-        
-        <h1>Hello World!</h1>
-        <form action="UserServlet" method="GET">
-            <button type="submit">Mostrar user</button>
-        </form>
+        <div class="register_view">
+            <div class="d-flex vw-100 vh-100">
+                <div class="col-sm-4 bg-color">
+                    <!-- Contenido del div con clase .bg-color -->
+                </div>
+                <div class="col-sm-8 d-flex justify-content-center align-items-center">
+                    <div class="container d-flex justify-content-center align-items-center">
+                        <form class="p-4" method="POST" action="UserServlet">
+                            <p class="fs-2 lh-1 text-center">Rellena el formulario de registro</p>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" name="email" class="form-control" id="email" aria-describedby="email">
+                                <div id="email" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" name="username" class="form-control" id="username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" name="password" class="form-control" id="password" minlength="6">
+                            </div>
+                            <div class="d-grid col-sm-8 w-100 ">
+                                <button type="submit" name="btn_register" class="btn btn-register">Registrarse</button>
+                            </div>
+
+                            <% if (request.getAttribute("errorMessage") != null) {%>
+                            <div class='mb-3 alert alert-danger text-center mt-2'><%= request.getAttribute("errorMessage")%></div>
+                            <% }%>
+                            <div class="form-text">Ya tienes una cuenta? <a aria-current="page" href="login.jsp">Login</a></div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
     </body>
 </html>
+

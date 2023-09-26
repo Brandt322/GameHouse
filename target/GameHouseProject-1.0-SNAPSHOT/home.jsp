@@ -47,7 +47,7 @@
                             </li>                            
                         </ul>
                         <form class="form-inline" action="Logout.jsp">
-                            <i class="fa-solid fa-user-circle"></i> - <%= session.getAttribute("email")%>
+                            <i class="fa-solid fa-user-circle"></i> <strong>#<%= session.getAttribute("id")%></strong> <%= session.getAttribute("username")%> - <%= session.getAttribute("email")%>
                             <button class="btn btn-outline-success" type="submit">Logout</button>
                         </form>
                         <a class="btn btn-success" href="cambiarPassword.jsp"> Actualizar Password</a>

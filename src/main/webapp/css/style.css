@@ -14,3 +14,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.register_view {
+  background-color: #EBEFFF;
+  background-image: url("../assets/Register Pageregister.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.btn-register {
+    background-color: #3D3A7E;
+    color: #fefefe;
+}
+
+.btn-register:hover {
+    color: #626BD1;
+}
+
+.btn-login {
+    background-color: #656ED3;
+    color: #fefefe;
+}
+
+.btn-login:hover {
+    color: #28235D
+}
