@@ -1,0 +1,9 @@
+com\gamehouse\gamehouseproject\UserServlet.class
+com\gamehouse\model\Controller.class
+com\gamehouse\persistance\PersistanceController.class
+com\gamehouse\persistance\exceptions\IllegalOrphanException.class
+com\gamehouse\persistance\exceptions\PreexistingEntityException.class
+com\gamehouse\persistance\UserJpaController.class
+com\gamehouse\model\User.class
+com\gamehouse\persistance\exceptions\NonexistentEntityException.class
+com\gamehouse\model\User_.class
