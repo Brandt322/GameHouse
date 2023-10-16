@@ -16,7 +16,7 @@
         <%
             HttpSession sesion = request.getSession();
             sesion.invalidate();
-            response.sendRedirect("login.jsp");      
+            response.sendRedirect("home.jsp");      
         %>
     </body>
 </html>
