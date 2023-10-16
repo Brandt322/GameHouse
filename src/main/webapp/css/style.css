@@ -40,3 +40,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 .btn-login:hover {
     color: #28235D
 }
+
+.background-sidebar {
+    background-color: #09080D;
+    
+}
+
+.text-items {
+    color: #9E9E9E;
+}
+
+
+.email-button {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Add any other styles you want for the email button */
+}
+
+.margen {
+    margin: 0 auto;
+}

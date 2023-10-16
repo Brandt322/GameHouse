@@ -1,0 +1,563 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 15 oct 2023, 23:29:56
+    Author     : U17302383
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* orden de las cajas*/
+
+.contenedor > * {
+    text-align: center;
+}
+
+.contenedor {
+    background: #1c1726;
+    display: grid;
+    gap: 20px;
+
+    grid-template:
+        "header" 80px
+        "nav" 60px
+        "main" auto
+        "contenedor" auto
+        "footer" 400px;
+}
+h3 {
+    color: #7a7a7a;
+}
+
+.header {
+    grid-area: header;
+}
+
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.contenedor {
+    grid-template:
+        "header header header" 200px
+        "nav main" auto
+        "footer footer footer" 460px /
+        300px auto 400px;
+}
+/*HEADER*/
+
+.contHeader>div {
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+
+.contHeader {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    background-color: rgb(28, 23, 38);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hb1 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.btnnav {
+    background-color: #09080d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+}
+
+.logoHeader {
+    height: 100%;
+    margin-left: 25px;
+}
+
+.logoHeader>a>img {
+    font: 35px Averta, -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-weight: bold;
+    height: 100%;
+}
+
+.logoHeader>a>img:hover {
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+.hb2 {
+    display: flex;
+    align-items: center;
+}
+
+.busCont {
+    border: 1px solid;
+    width: 55%;
+    height: 75%;
+    margin-left: 5%;
+    border-radius: 5px;
+    border-color: rgb(191, 182, 210, 0.3);
+    background-color: rgb(191, 182, 210, 0.1);
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+
+.border-radius {
+    border: none;
+}
+
+#impBus {
+    background-color: transparent;
+    border: transparent;
+    text-align: justify;
+    color: rgb(191, 182, 210, 0.5);
+}
+
+.busCont>button {
+    width: 100%;
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+
+.busCont>button>i:hover {
+    scale: 1.1;
+    transition: 0.01s;
+}
+
+.hb3 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.noti {
+    padding: 5px;
+}
+
+.secion,
+.aComunidad {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#ah {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#ah:hover {
+    scale: 1.1;
+    transition: 0.01s;
+}
+
+.logoHeader {
+}
+
+.user {
+    width: auto;
+    height: 80%;
+    border-radius: 5px;
+    border: 1px solid rgb(191, 182, 210, 0.5);
+    background-color: rgb(191, 182, 210, 0.2);
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    align-items: center;
+    margin-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.texu {
+    height: 35px;
+    width: auto;
+}
+
+#nsmr {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoUser {
+    height: 30px;
+    width: 30px;
+    border: 2px solid red;
+    border-radius: 50%;
+}
+
+.menuDere {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contNav {
+    width: 50px;
+    height: 100%;
+    position: fixed;
+    border: 1px solid;
+    border-color: rgb(28, 23, 38);
+}
+
+
+/*footer*/
+
+.piePadre1 {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    background-color: #372f4c;
+}
+
+.piePadre1 > div > h1 {
+    color: white;
+    margin-top: 30px;
+    font: 15px Arial, sans-serif;
+    display: flex;
+}
+
+.piePadre1 > div > a {
+    text-decoration: none;
+    color: gray;
+    margin-top: 20px;
+    display: flex;
+    font: 13px Arial, sans-serif;
+}
+
+.piePadre1 > div > a:hover {
+    color: white;
+    transition: 0.2s all ease;
+}
+
+.piePadre1 > div > h2 {
+    margin-bottom: 5px;
+    color: gray;
+    margin-top: 40px;
+    display: flex;
+    font: 13px Arial, sans-serif;
+}
+
+.piePadre1 > div > p {
+    color: gray;
+    margin-top: 20px;
+    display: flex;
+    font: 13px Arial, sans-serif;
+}
+
+.pie1 {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.log {
+    color: white;
+    width: 200px;
+    height: 80px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: bold 55px Arial, sans-serif;
+}
+
+.pie2 {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pie3 {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pie4 {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.piePadre2 {
+    background-color: #1c1726;
+    border-top: 1px solid;
+    border-color: #606060;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.piePadre2 > div > p {
+    color: gray;
+    display: flex;
+    font: 13px Arial, sans-serif;
+}
+
+.pie5 {
+    width: 400px;
+}
+
+.pie6 {
+    width: 300px;
+}
+
+/*slider*/
+
+.container-slider {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    top: -50px;
+}
+.slider {
+    display: flex;
+    width: 400%;
+    height: 600px;
+    margin-left: -100%;
+}
+.slider_section {
+    width: 100%;
+}
+.slider_imagen {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider_btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: monospace;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider_btn:hover {
+    background: #fff;
+}
+
+.slider_btn-left {
+    left: 10px;
+}
+.slider_btn-right {
+    right: 10px;
+}
+
+/*Cards*/
+.container-card {
+    width: 100%;
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.title-cards {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #d15c09;
+}
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #372f4c;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease-out;
+    cursor: default;
+}
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+.card img {
+    width: 100%;
+    height: 280px;
+}
+.card .contenido-card {
+    padding: 15px;
+    text-align: center;
+}
+.card .contenido-card h3 {
+    margin-bottom: 15px;
+    color: #7a7a7a;
+}
+.card .contenido-card p {
+    line-height: 1.8;
+    color: #6a6a6a;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.card .contenido-card a {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    margin-bottom: 5px;
+}
+.card .contenido-card a:hover {
+    background: #2fb4cc;
+    color: #fff;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .container-card {
+        flex-wrap: wrap;
+    }
+    .card {
+        margin: 15px;
+    }
+}
+
+h2,
+small,
+a {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.Carousel {
+    width: 100%;
+    display: flexbox;
+    max-width: 1600px;
+    margin: auto;
+
+}
+.Carousel h2 {
+    font-size: 26px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    color: #d15c09;
+}
+
+/* images */
+
+.slick-list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 304px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 80vw;
+    overflow: hidden;
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+}
+.slick {
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.slick a img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+.slick a img:hover {
+    opacity: 0.85;
+}
+
+/* buttons */
+
+.slick-arrow {
+    border-radius: 30px;
+    background-color: white;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(250, 250, 250, 0.15);
+    border: 0;
+    cursor: pointer;
+}
+.slick-arrow:focus {
+    outline: 0;
+}
+.slick-arrow svg {
+    width: 12px;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.7);
+}
+.slick-prev {
+    left: 0px;
+}
+.slick-next {
+    right: 0px;
+}
+
